@@ -79,7 +79,10 @@ namespace TrainingDiary
                 .DeleteOneAsync(t => t.Id == _id);
         }
 
-        
+        internal Task SaveTrainingSession(object trainingSession)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

@@ -1,15 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using MongoDB.Bson;
-using System.ComponentModel.DataAnnotations;
 
 namespace TrainingDiary.Models
 {
-    public class TrainingSession
+    public class CreateTrainingSessionModel
     {
         public ObjectId Id { get; set; }
         public DateTime Date { get; set; }
-        public string Exercise { get; set; }
+        public IEnumerable<SelectListItem> Sessions { get; set; }
         public string PerformanceData { get; set; }
-               
+        public IEnumerable<SelectListItem> Exercises { get; internal set; }
     }
 }
